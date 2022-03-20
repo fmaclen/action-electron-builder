@@ -73,6 +73,10 @@ const runAction = () => {
 	const args = getInput("args") || "";
 	const maxAttempts = Number(getInput("max_attempts") || "1");
 
+	console.log('\n\n\n -------------------------------> release:', release, '\n\n\n');
+
+	// if (!release) throw new Error("Marked as not a release :(");
+
 	// TODO: Deprecated option, remove in v2.0. `electron-builder` always requires a `package.json` in
 	// the same directory as the Electron app, so the `package_root` option should be used instead
 	const appRoot = getInput("app_root") || pkgRoot;
